@@ -9,11 +9,9 @@
 
 bool test_multiply();
 
-bool test_multiply_invalid_dims();
+bool test_add();
 
-bool test_add_invalid_dims();
-
-bool test_subtract_invalid_dims();
+bool test_subtract();
 
 bool test_apply();
 

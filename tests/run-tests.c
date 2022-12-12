@@ -36,11 +36,25 @@ int main ()
 
 	assert(test_set_col());
 
-	// matrix operations test
-
 	printf("All matrix tests pass\n");
 
-	// printf("All matrix function tests pass");
+	// matrix operations test
+
+	assert(test_multiply());
+
+	assert(test_add());
+
+	assert(test_subtract());
+
+	assert(test_apply());
+
+	assert(test_scale());
+
+	assert(test_addScalar());
+
+	assert(test_transpose());
+
+	printf("All matrix function tests pass\n");
 
 	return 0;
 }
