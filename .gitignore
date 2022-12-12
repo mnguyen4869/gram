@@ -1,3 +1,6 @@
 # ignore dot files
 .*
+*.so
+*.a
 !/.gitignore
+compile_commands.json
