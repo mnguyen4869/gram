@@ -18,10 +18,7 @@ bool test_free_mat(void)
 {
 	matrix *m = grm_create_mat(10, 10);
 	grm_free_mat(&m);
-	if (m != NULL) {
-		return true;
-	}
-	return true;
+	return (m == NULL);
 }
 
 bool test_copy_mat(void)
@@ -70,10 +67,7 @@ bool test_argmax_mat(void)
 	grm_copy_data(m, data, 10);
 	double max = grm_argmax_mat(m);
 	grm_free_mat(&m);
-	if (max == 10) {
-		return true;
-	}
-	return false;
+	return (max == 10);
 }
 
 bool test_flatten_mat(void)
@@ -101,8 +95,8 @@ bool test_flatten_mat(void)
 
 bool test_create_rand_mat(void)
 {
-	matrix *m = grm_create_rand_mat(5, 5);
-	matrix *n = grm_create_rand_mat(5, 5);
+	matrix *m = grm_create_rand_mat(5, 5, -1, 1);
+	matrix *n = grm_create_rand_mat(5, 5, -1, 1);
 	unsigned int dim = m->num_cols * m->num_rows;
 	for (unsigned int i = 0; i < dim; i++) {
 		if (n->data[i] != m->data[i]){

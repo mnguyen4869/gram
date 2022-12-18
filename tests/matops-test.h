@@ -7,18 +7,18 @@
 #include <stdbool.h>
 #include <assert.h>
 
-bool test_multiply();
+bool test_multiply(void);
 
-bool test_add();
+bool test_add(void);
 
-bool test_subtract();
+bool test_subtract(void);
 
-bool test_apply();
+bool test_apply(void);
 
-bool test_scale();
+bool test_scale(void);
 
-bool test_addScalar();
+bool test_addScalar(void);
 
-bool test_transpose();
+bool test_transpose(void);
 
 #endif /* !MATOPS_TEST */

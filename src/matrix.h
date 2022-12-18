@@ -5,12 +5,12 @@
 #include <stdio.h>
 
 typedef struct {
-	unsigned int num_rows;
-	unsigned int num_cols;
+	size_t num_rows;
+	size_t num_cols;
 	double *data; 
 } matrix;
 
-matrix *grm_create_mat(unsigned int row, unsigned int col);
+matrix *grm_create_mat(size_t row, size_t col);
 
 void grm_copy_data(matrix *m, double *data, size_t size);
 
@@ -30,16 +30,16 @@ int grm_argmax_mat(matrix *m);
 
 matrix *grm_flatten_mat(matrix *m, int axis);
 
-matrix *grm_create_rand_mat(unsigned int row, unsigned int col);
+matrix *grm_create_rand_mat(size_t row, size_t col, double min, double max);
 
-matrix *grm_create_idmat(unsigned int n);
+matrix *grm_create_idmat(size_t n);
 
-matrix *grm_get_row(matrix *m, unsigned int i);
+matrix *grm_get_row(matrix *m, size_t i);
 
-void grm_set_row(matrix *m, unsigned int i, double *d);
+void grm_set_row(matrix *m, size_t i, double *d);
 
-matrix *grm_get_col(matrix *m, unsigned int j);
+matrix *grm_get_col(matrix *m, size_t j);
 
-void grm_set_col(matrix *m, unsigned int j, double *d);
+void grm_set_col(matrix *m, size_t j, double *d);
 
 #endif /* !MATRIX */
