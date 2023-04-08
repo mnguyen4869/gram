@@ -40,7 +40,7 @@ int main ()
 
 	// matrix operations test
 
-	assert(test_multiply());
+	assert(test_dot());
 
 	assert(test_add());
 
@@ -50,7 +50,7 @@ int main ()
 
 	assert(test_scale());
 
-	assert(test_addScalar());
+	assert(test_add_scalar());
 
 	assert(test_transpose());
 

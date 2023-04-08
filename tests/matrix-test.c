@@ -67,7 +67,7 @@ bool test_argmax_mat(void)
 	grm_copy_data(m, data, 10);
 	double max = grm_argmax_mat(m);
 	grm_free_mat(&m);
-	return (max == 10);
+	return (max == 9);
 }
 
 bool test_flatten_mat(void)

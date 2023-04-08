@@ -8,7 +8,7 @@ double ReLU (double in) {
 	return 0;
 }
 
-bool test_multiply()
+bool test_dot()
 {
 	double m_data[10] = {1, 1, 1, 1, 1, 2, 2, 2, 2, 2};
 	matrix *m = grm_create_mat(2, 5);
@@ -18,7 +18,7 @@ bool test_multiply()
 	matrix *n = grm_create_mat(5, 2);
 	grm_copy_data(n, n_data, 10);
 
-	matrix *o = grm_multiply(m, n);
+	matrix *o = grm_dot(m, n);
 	grm_free_mat(&m);
 	grm_free_mat(&n);
 
@@ -126,13 +126,13 @@ bool test_scale()
 	return true;
 }
 
-bool test_addScalar()
+bool test_add_scalar()
 {
 	double m_data[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	matrix *m = grm_create_mat(2, 5);
 	grm_copy_data(m, m_data, 10);
 
-	matrix *n = grm_addScalar(2, m);
+	matrix *n = grm_add_scalar(2, m);
 	grm_free_mat(&m);
 
 	double expected[10] = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12};

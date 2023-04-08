@@ -7,6 +7,8 @@
 #include <stdbool.h>
 #include <assert.h>
 
+bool test_dot(void);
+
 bool test_multiply(void);
 
 bool test_add(void);
@@ -17,7 +19,7 @@ bool test_apply(void);
 
 bool test_scale(void);
 
-bool test_addScalar(void);
+bool test_add_scalar(void);
 
 bool test_transpose(void);
 
